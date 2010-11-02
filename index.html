@@ -9,13 +9,13 @@
 
   {% for photo in photos %}
     <a photoid="{{ photo.id }}"
-    	class="thumb lightbox"
-    	style="width:{{ user.thumb_size }}; height:{{ user.thumb_size }};"
-    	title="{{ photo.name }}"
-    	href="{{ photo.url }}"
-    	thumb="{{ photo.thumb_url }}"
-    	height="{{ photo.height }}"
-    	width="{{ photo.width }}">
+        class="thumb lightbox"
+        style="width:{{ user.thumb_size }}; height:{{ user.thumb_size }};"
+        title="{{ photo.name }}"
+        href="{{ photo.url }}"
+        thumb="{{ photo.thumb_url }}"
+        height="{{ photo.height }}"
+        width="{{ photo.width }}">
       <span><img border="0" title="{{ photo.name }}" alt="{{ photo.name }}" src="{{ photo.thumb_url }}" {%comment%}height="72" width="72"{%endcomment%} /></span>
     </a>
   {% endfor %}

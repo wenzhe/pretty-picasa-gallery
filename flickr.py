@@ -643,7 +643,7 @@ def photos_search_pages(user_id='', auth=False,  tags='', tag_mode='', text='',\
                   license='', per_page='', page='', sort=''):
     """Returns the number of pages for the previous function (photos_search())
     """
-	
+  
     method = 'flickr.photos.search'
 
     data = _doget(method, auth=auth, user_id=user_id, tags=tags, text=text,\
@@ -653,11 +653,11 @@ def photos_search_pages(user_id='', auth=False,  tags='', tag_mode='', text='',\
                   max_taken_date=max_taken_date, \
                   license=license, per_page=per_page,\
                   page=page, sort=sort)
-	
+  
     return data.rsp.photos.pages
-	
-	
-	
+  
+  
+  
 #XXX: Could be class method in User
 def people_findByEmail(email):
     """Returns User object."""
@@ -844,7 +844,7 @@ def _doget(method, auth=False, **params):
     from google.appengine.api import memcache
     result = memcache.get(url)
     if result:
-	return result
+  return result
     
     result = urlopen(url).read()
     memcache.set(url, result)
@@ -1023,7 +1023,7 @@ class Blogs():
                 return "Unknown error!"
         except AttributeError:
             return "There are no blogs!"
-		
+    
         myReturn = [bID,bName,bNeedsPword,bURL]
         return myReturn
 

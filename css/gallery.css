@@ -54,7 +54,7 @@ body {
 
 
 #nav-title .lightgray {
-	color: #CCCCCC;
+  color: #CCCCCC;
 }
 
 #nav a:hover {
@@ -80,59 +80,59 @@ body {
 }
 
 #lightbox-nav {
-	display: none;
+  display: none;
 }
 
 .product-attr-name {
-	font-size: 1.2em;
-	padding-bottom: 10px;
+  font-size: 1.2em;
+  padding-bottom: 10px;
 }
 
 /*****************************************************************************
  * Utilities
  */
 .clearfix {
-	clear: both;
+  clear: both;
 }
 
 .success,
 .error {
-	border: 1px solid #BBB;
-	border-bottom-left-radius: 6px 6px;
-	border-bottom-right-radius: 6px 6px;
-	border-top-left-radius: 6px 6px;
-	border-top-right-radius: 6px 6px;
-	margin: 1em 0px;
-	padding: 0.99em;
-	text-align: center;
-	color: #999;
+  border: 1px solid #BBB;
+  border-bottom-left-radius: 6px 6px;
+  border-bottom-right-radius: 6px 6px;
+  border-top-left-radius: 6px 6px;
+  border-top-right-radius: 6px 6px;
+  margin: 1em 0px;
+  padding: 0.99em;
+  text-align: center;
+  color: #999;
 }
 
 .success {
-	border-color: #FCEFA1;
-	background-color: #FBF9EE;
+  border-color: #FCEFA1;
+  background-color: #FBF9EE;
 }
 
 .error {
-	border-color: #CD0A0A;
-	background-color: #FEF1EC;
+  border-color: #CD0A0A;
+  background-color: #FEF1EC;
 }
 
 #admin-form {
-	border: 1px solid #BBB;
-	border-bottom-left-radius: 6px 6px;
-	border-bottom-right-radius: 6px 6px;
-	border-top-left-radius: 6px 6px;
-	border-top-right-radius: 6px 6px;
-	padding: 0.99em;
+  border: 1px solid #BBB;
+  border-bottom-left-radius: 6px 6px;
+  border-bottom-right-radius: 6px 6px;
+  border-top-left-radius: 6px 6px;
+  border-top-right-radius: 6px 6px;
+  padding: 0.99em;
 }
 .admin-option {
-	color: #999;
-	margin: 5px 0;
+  color: #999;
+  margin: 5px 0;
 }
 
 .admin-option input[type="checkbox"] {
-	margin-left: 4em
+  margin-left: 4em
 }
 
 /*****************************************************************************

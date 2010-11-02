@@ -58,25 +58,25 @@
 
 <!-- lightbox javascript -->
 <script type="text/javascript">
-	$(document).ready(function() {
-		$('a.lightbox').lightBox({
-			'imageLoading': '/images/lightbox-ico-loading.gif',
-			'imageBtnClose': '/images/lightbox-btn-close.gif',
-			'imageBtnNext': '/images/lightbox-btn-next.gif',
-			'imageBtnPrev': '/images/lightbox-btn-prev.gif',
-			'imageBlank': '/images/lightbox-blank.gif',
-		});
-		
-		if (document.location.hash) {
-			$(''+document.location.hash).click();
-		}
-		
-		window.setTimeout(function() {
-			$('.message').fadeOut(800, function() {
-				$(this).remove();
-			});
-		}, 2000);
-	});
+    $(document).ready(function() {
+        $('a.lightbox').lightBox({
+            'imageLoading': '/images/lightbox-ico-loading.gif',
+            'imageBtnClose': '/images/lightbox-btn-close.gif',
+            'imageBtnNext': '/images/lightbox-btn-next.gif',
+            'imageBtnPrev': '/images/lightbox-btn-prev.gif',
+            'imageBlank': '/images/lightbox-blank.gif',
+        });
+        
+        if (document.location.hash) {
+            $(''+document.location.hash).click();
+        }
+        
+        window.setTimeout(function() {
+            $('.message').fadeOut(800, function() {
+                $(this).remove();
+            });
+        }, 2000);
+    });
 </script>
 <!-- end lightbox javascript -->
 

@@ -5,9 +5,9 @@ import os
 
 SERVER_SOFTWARE = os.environ['SERVER_SOFTWARE'].split('/')[0]
 if SERVER_SOFTWARE == 'Development':
-	DEBUG = True
+    DEBUG = True
 else:
-	DEBUG = False
+    DEBUG = False
 
 THUMB_SIZES = [32, 48, 64, 72, 75, 104, 144, 150, 160]
 THUMB_SIZE_DEFAULT = 72
