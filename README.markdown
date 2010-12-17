@@ -6,7 +6,6 @@ Pretty Picasa Gallery
 This is a python photo gallery designed to run on Google's App Engine. Currently, photos are hosted on Picasa and the gallery reads the album list and displays those on a more professional looking gallery page, complete with Lightbox support.
 
 ## Features
-
 * Picasa photo backend support
 * User configurable album support
 * Various photo sizes support
@@ -27,9 +26,9 @@ Download the source code from github and install the Google App Engine SDK.  Onc
 
 Then go to the site `http://localhost:8080/admin/` in your browser.  You should be asked to log into your account. From here, enter in your google account id (or whatever email is associated with your picasa account) and choose to log in as an administrator. For example, log in as `<your gmail id>@gmail.com` This will redirect you to the admin page. On this page, fill in some values:
 
-    * Photo provider id should be your gmail id without the `@gmail.com`
-    * Site title should be whatever you want it to be
-    * Site header should be whatever you want it to be
+* Photo provider id should be your gmail id without the `@gmail.com`
+* Site title should be whatever you want it to be
+* Site header should be whatever you want it to be
 
 Click save which will refresh the page and list your albums. Here, choose your homepage album and check the boxes for the albums you want to be displayed, and, optionally, if you want an album that displays all the featured albums together on one page.
 
@@ -46,12 +45,11 @@ Then, from within the source directory, run
 and enter your login and password. Once the upload finishes, go to your application's url and run through the steps in the **Running** section above.
 
 ## Known Issues
-
-    * Flickr backend doesn't work
-    * Installation process could use some work
-    * When no merchant ID is entered, we still show a price for photos
-    * Photo price is hard coded
-    * Picasa albums must be public
+* Flickr backend doesn't work
+* Installation process could use some work
+* When no merchant ID is entered, we still show a price for photos
+* Photo price is hard coded
+* Picasa albums must be public
 
 
 Current release is version 1.1
