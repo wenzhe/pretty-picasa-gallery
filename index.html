@@ -4,11 +4,12 @@
 <!-- thumb-container -->
 <div id="thumb-container">
   {% if homepage_photo %}
-    <a href="/{{ homepage_photo.album }}/#{{ homepage_photo.id}}"><img border="0" src="{{ homepage_photo.src }}" /></a>
+    <a href="/{{ homepage_photo.album }}/#{{ homepage_photo.id }}"><img border="0" src="{{ homepage_photo.src }}" /></a>
   {% endif %}
 
   {% for photo in photos %}
     <a photoid="{{ photo.id }}"
+        id="{{ photo.id }}-id"
         class="thumb lightbox"
         style="width:{{ user.thumb_size }}; height:{{ user.thumb_size }};"
         title="{{ photo.name }}"

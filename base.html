@@ -56,7 +56,7 @@
   </div>
   <!-- end container -->
 
-<!-- lightbox javascript -->
+<!-- javascript -->
 <script type="text/javascript">
     $(document).ready(function() {
         $('a.lightbox').lightBox({
@@ -68,7 +68,7 @@
         });
         
         if (document.location.hash) {
-            $(''+document.location.hash).click();
+            $(''+document.location.hash+'-id').click();
         }
         
         window.setTimeout(function() {
@@ -78,7 +78,7 @@
         }, 2000);
     });
 </script>
-<!-- end lightbox javascript -->
+<!-- end javascript -->
 
 {% if user.merchant_id %}
 <!-- google checkout -->

@@ -844,7 +844,7 @@ def _doget(method, auth=False, **params):
     from google.appengine.api import memcache
     result = memcache.get(url)
     if result:
-  return result
+        return result
     
     result = urlopen(url).read()
     memcache.set(url, result)
