@@ -228,9 +228,9 @@ class MainPage(BasePage):
         # Reset template values with every new request.
         self.template_values = {
                 'user': self.userprefs,
-            'title': self.userprefs.site_title+" gallery",
-            'albums': backend.GetFeaturedAlbums(self.userprefs.featured_albums),
-            'debug': settings.DEBUG,
+                'title': self.userprefs.site_title+" gallery",
+                'albums': backend.GetFeaturedAlbums(self.userprefs.featured_albums),
+                'debug': settings.DEBUG,
         }
         if users.is_current_user_admin():
             self.template_values['logout_url'] = users.create_logout_url('/')

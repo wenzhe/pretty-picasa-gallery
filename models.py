@@ -30,6 +30,9 @@ class PhotoBackend():
             
             featured_albums.append(album)
         
+        # Sort by name
+        featured_albums.sort(key=lambda a: a['title'])
+        
         if 'all' in featured:
             featured_albums.append({'id': 'all', 'title': 'all'})
         
@@ -85,6 +88,8 @@ class PicasaBackend(PhotoBackend):
                 'id': album.gphoto_id.text,
                 'title': album.title.text,
             })
+        
+        albums.sort(key=lambda a: a['title'])
         
         # set memcache
         self.CacheSet(key, albums)
