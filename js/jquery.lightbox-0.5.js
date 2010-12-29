@@ -265,7 +265,7 @@
 				caption += '<div class="product-attr-name" style="">' + settings.imageArray[settings.activeImage][1] + '</div>';
 				caption += '<div class="googlecart-add-button" tabindex="0" role="button" title="Add to cart" style="float:left;padding-bottom:5px;"></div>';
 				caption += '<div class="product-title"" style="float:left;padding:5px;">'+height+'"x'+width+'" print</div>';
-				caption += '<div class="product-price" style="float:left;padding:5px;color:red;">$49.99</div>';
+				caption += '<div class="product-price" style="float:left;padding:5px;color:red;">$24.99</div>';
 				caption += '<div class="product-attr-pid" style="display:none;">'+settings.imageArray[settings.activeImage][2]+'</div>';
 				caption += '</span>';
 				$('#lightbox-image-details-caption').html(caption).show();
