@@ -249,15 +249,19 @@
 			$('#lightbox-image-details-caption').hide();
 			if ( settings.imageArray[settings.activeImage][1] ) {
 				
-				var maxHeightWidth = 11;
+				var maxHeightWidth = 12;
 				var height = parseInt(settings.imageArray[settings.activeImage][5]);
 				var width = parseInt(settings.imageArray[settings.activeImage][4]);
 				if (width > height) {
 					height = Math.round((maxHeightWidth * height) / width * 100) / 100;
 					width = maxHeightWidth;
+					width = 10;
+					height = 8;
 				} else {
 					width = Math.round((maxHeightWidth * width) / height * 100) / 100;
 					height = maxHeightWidth;
+					width = 8;
+					height = 10;
 				}
 				
 				var caption = '<span class="product">';
