@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block container %}
+<!-- thumb-container -->
+<div id="thumb-container">
+  {% if error %}
+    <div class="message error">An error occured! [{{ error_message }}]</div>
+  {% endif %}
+  {% if saved %}
+    <div class="message success">Successfully saved the settings.</div>
+  {% endif %}
+  {% if cache_cleared %}
+    <div class="message success">Successfully cleared the cache.</div>
+  {% endif %}
+  <form id="admin-form" method="post" action="/admin/">
+    <div class="admin-option">
+      <label for="backend">Gallery backend:</label>
+      <select id="backend" name="backend">
+      {% for o in settings.PHOTO_BACKENDS %}
+        <option {% ifequal o user.photo_backend %}selected="selected"{% endifequal %} value="{{ o }}">{{ o }}</option>
+      {% endfor %}
+      </select>
+    </div>
+    <div class="admin-option">
+      <label for="backend-id">Photo provider ID:</label>
+      <input id="backend-id" name="backend-id" type="text" value="{{ user.GetUsername }}" />
+    </div>
+    <div class="admin-option">
+      <label for="site-title">Site title:</label>
+      <input id="site-title" name="site-title" type="text" value="{{ user.site_title }}" />
+    </div>
+    <div class="admin-option">
+      <label for="site-header">Site header:</label>
+      <input id="site-header" name="site-header" type="text" value="{{ user.site_header }}" />
+    </div>
+    <div class="admin-option">
+      <label for="thumb-size">Thumbnail size:</label>
+      <select id="thumb-size" name="thumb-size">
+      {% for o in settings.THUMB_SIZES %}
+        <option {% ifequal o user.thumb_size %}selected="selected"{% endifequal %}>{{ o }}</option>
+      {% endfor %}
+      </select>
+    </div>
+    <div class="admin-option">
+      <label for="thumb-cropped">Thumbnails are cropped:</label>
+      <select id="thumb-cropped" name="thumb-cropped">
+        <option value='1' {% if user.thumb_cropped %}selected="selected"{% endif %}>true</option>
+        <option value='' {% if not user.thumb_cropped %}selected="selected"{% endif %}>false</option>
+      </select>
+    </div>
+    <div class="admin-option">
+      <label for="full-size">Lightbox size:</label>
+      <select id="full-size" name="full-size">
+      {% for o in settings.FULL_SIZES %}
+        <option {% ifequal o user.full_size %}selected="selected"{% endifequal %}>{{ o }}</option>
+      {% endfor %}
+      </select>
+    </div>
+    <div class="admin-option">
+      <label for="homepage-size">Homepage size:</label>
+      <select id="homepage-size" name="homepage-size">
+      {% for o in settings.FULL_SIZES %}
+        <option {% ifequal o user.homepage_size %}selected="selected"{% endifequal %}>{{ o }}</option>
+      {% endfor %}
+      </select>
+    </div>
+    <div class="admin-option">
+      <label for="homepage-album">Homepage album:</label>
+      <select id="homepage-album" name="homepage-album">
+      {% for a in all_albums %}
+        <option {% ifequal a.title user.homepage_album %}selected="selected"{% endifequal %}>{{ a.title }}</option>
+      {% endfor %}
+      </select>
+    </div>
+    <div class="admin-option">
+      <label for="featured-albums">Featured albums:</label>
+      <br />
+      {% for a in all_albums %}
+        <input id="featured-album{{ forloop.counter0 }}"
+                type="checkbox"
+                name="featured-album"
+                {% if a.featured %}checked="checked"{% endif %}
+                value="{{ a.title }}" />
+        <label for="featured-album{{ forloop.counter0 }}">{{ a.title }}</label>
+        <br />
+      {% endfor %}
+    </div>
+    <div class="admin-option">
+      <label for="merchant-id">Google Checkout merchant ID:</label>
+      <input id="merchant-id" name="merchant-id" type="text" value="{{ user.merchant_id|default_if_none:"" }}" />
+      <a href="https://checkout.google.com/sell/settings?section=Profile">lookup</a>
+    </div>
+    <div class="admin-option">
+      <label for="analytics-id">Google Analytics ID:</label>
+      <input id="analytics-id" name="analytics-id" type="text" value="{{ user.analytics_id|default_if_none:"" }}" />
+    </div>
+    <div class="admin-option">
+      <input type="submit" name="submit" value="Save" />
+      <input type="submit" name="clear-cache" value="Clear Cache" />
+    </div>
+  </form>
+</div>
+<!-- end thumb-container -->
+{% endblock container %}
