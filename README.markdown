@@ -50,6 +50,7 @@ and enter your login and password. Once the upload finishes, go to your applicat
 * When no merchant ID is entered, we still show a price for photos
 * Photo price is hard coded
 * Picasa albums must be public
+* Spaces in album names does not work
 
 
 Current release is version 1.1
